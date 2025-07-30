@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #faebd7;
+}
+
+li {
+    list-style: none;
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+}
+
+header {
+    display: flex;
+    padding: 0;
+}
+
+
+.sp-menu {
+    margin: 0;
+}
+
+.sp-menu #open {
+    font-size: 32px;
+    line-height: 64px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: relative;
+    background: #f4e0c4;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    z-index: 2;
+}
+
+
+
+.overlay #close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+
+}
+
+.sp-menu #open.hidde {
+    display: none
+}
+
+.overlay ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay li {
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translate(0, 8px);
+    transition: transform, 1s opacity.1s;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay.show li {
+    opacity: 1;
+    transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+    transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(3) {
+    transition-delay: .6s;
+}
+
+.overlay.show li:nth-child(4) {
+    transition-delay: .9s;
+}
+
+.pc-menu {
+    display: none;
+
+}
+
+
+/* メイン */
+
+.box-1 {
+    display: flex;
+    margin: 0 20px;
+    /* height: 80vh; */
+    position: relative;
+}
+
+.box-1 p {
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.box-1 p.title1 {
+    font-size: 20px;
+}
+
+.box-1 p.title2 {
+    font-size: 50px;
+}
+
+.photo {
+    width: 750px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 750px;
+    height: 450px;
+    position: absolute;
+    top: -10%;
+    left: 40%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.photo img.current {
+    opacity: 1;
+}
+
+/* フラワー */
+.flower-a p {
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.Flowers ul {
+    display: flex;
+    justify-content: center;
+}
+
+.Flowers ul li {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.wedding img {
+   width: 260px;
+    height: 330px;
+    border-radius: 30%;
+}
+.wedding p{
+ display: flex;
+ justify-content: center;
+ font-size: 1.7rem;
+ margin: 30px;
+ color: #d2691e;
+}
+.anniversary ul {
+    display: flex;
+}
+
+.anniversary ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.anniversary img{
+   width: 260px;
+    height: 330px;
+    border-radius: 30%;
+}
+.anniversary p{
+    display: flex;
+ justify-content: center;
+ font-size: 1.7rem;
+ margin: 30px;
+ color: #d2691e;
+}
+
+.gardening ul {
+    display: flex;
+}
+
+.gardening ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.gardening img {
+     width: 260px;
+    height: 330px;
+    border-radius: 30%;
+}
+.gardening p{
+    display: flex;
+ justify-content: center;
+ font-size: 1.7rem;
+ margin: 30px;
+ color: #d2691e; 
+}
+/* イベント */
+.eee{
+    text-align: center;
+}
+.e p{
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem
+}
+.ee p.e-a{
+    position: relative;
+    width: 70%;
+    border-bottom: 1px black solid;
+    padding: 30px;
+    text-align: start;
+}
+.ee p.e-b{
+    position: relative;
+    width: 60%;
+    border-bottom: 1px black solid;
+    margin-left: auto;
+    padding: 30px;
+    text-align: start;
+}
+.ee p{
+font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.eee{
+    margin: 50px;
+}
+/* コンタクト */
+.con1{
+ text-align: center;
+}
+.con1 p{
+  font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.con2 p{
+font-size: 2rem;
+}
+/* アニメ */
+	@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
+}
+  to {
+  transform: translateX(-100%);
+}
+}
+
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 30px;
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(100vw / 6);
+}
+.scroll-infinity__item img {
+  width: 200px;
+  height: 200px;
+border-radius: 20px;
+}
+.con3{
+    margin: 30px;
+}
+.con3 p{
+    font-size: 1.4rem;
+}
+
+/* ヘッダー*/
+.footer-last ul li {
+    position: relative;
+    display: flex;
+    margin-left: 80%;
+
+}
+
+.footer-last1 ul {
+    background-color: #f4e0c4;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.footer-last1 ul li {
+    display: flex;
+    margin: 30px;
+}
+
+@media(min-widht:600px) {
+    .pc-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    sp-menu {
+        display: none;
+    }
+}
